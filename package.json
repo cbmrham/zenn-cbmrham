@@ -1,0 +1,23 @@
+{
+  "name": "zenn-cbmrham",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbmrham/zenn-cbmrham.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cbmrham/zenn-cbmrham/issues"
+  },
+  "homepage": "https://github.com/cbmrham/zenn-cbmrham#readme",
+  "dependencies": {
+    "zenn-cli": "^0.1.148"
+  }
+}
