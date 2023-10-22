@@ -3,7 +3,7 @@ title: "Next.js App router で多言語化対応 w/next-i18n-router"
 emoji: "🐡"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["react", "i18n", "nextjs", "next-i18n-router", "App Router"]
-published: false
+published: true
 ---
 
 [next-i18n-router](https://github.com/i18nexus/next-i18n-router)と[i18next](https://github.com/i18next/i18next)を使用して、すっきりと i18n に対応します。加えて、[react-i18next](https://github.com/i18next/react-i18next)によって CSR に対応します。
