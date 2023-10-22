@@ -19,3 +19,7 @@ npx zenn new:book
 ```sh
 npx zenn preview
 ```
+
+## view github zenn setting
+
+https://zenn.dev/dashboard/deploys?tab=repo_settings
