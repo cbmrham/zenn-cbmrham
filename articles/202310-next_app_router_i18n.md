@@ -2,7 +2,7 @@
 title: "Next.js App router で多言語化対応 w/next-i18n-router"
 emoji: "🐡"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["react", "i18n", "nextjs", "next-i18n-router", "App Router"]
+topics: ["react", "i18n", "nextjs", "AppRouter"]
 published: true
 ---
 
@@ -54,37 +54,36 @@ published: true
   };
   ```
 
-ここまでの設定によって、クライアントサイド/サーバーサードそれぞれ以下のような形で、ブラウザの言語設定にしたがったロケールを取得できるようになります。
+- ここまでの設定によって、クライアントサイド/サーバーサードそれぞれ以下のような形で、ブラウザの言語設定にしたがったロケールを取得できるようになります。
 
-```tsx
-'use client';
+  ```tsx
+  'use client';
 
-import { useCurrentLocale } from 'next-i18n-router/client';
-import i18nConfig from '@/i18nConfig';
+  import { useCurrentLocale } from 'next-i18n-router/client';
+  import i18nConfig from '@/i18nConfig';
 
-function ExampleClientComponent() {
-  const locale = useCurrentLocale(i18nConfig);
+  function ExampleClientComponent() {
+    const locale = useCurrentLocale(i18nConfig);
 
-  ...
-}
-```
+    ...
+  }
+  ```
 
-```tsx
-	// server component
-function ExampleServerComponent({ params: { locale } }) {
-  ...
-}
-```
+  ```tsx
+    // server component
+  function ExampleServerComponent({ params: { locale } }) {
+    ...
+  }
+  ```
 
 そして、default locale を ja にしている場合、ブラウザの設定が日本語の場合は locale のパスが省略されます。たとえば`products` へのルーティングの場合、パスは
 
 日本語: `/products`
-
 英語: `/en/products`
 
 となります。
 
-## i18next による Sserver Component の対応
+## i18next による Sserver Component の多言語対応
 
 i18next を導入して SSG されるコンポーネントに対応します。
 
@@ -250,6 +249,6 @@ i18next の設定ファイルはそのままに、csr も同様に t 関数を�
 
 ## 所感
 
-はじめは[Next.js のドキュメント](https://nextjs.org/docs/app/building-your-application/routing/internationalization)にある形で実装しましたがちょっと煩雑になっている感が否めなかったのですが、next-i18n-router にあやかりスッキリしました。
+はじめは[Next.js のドキュメント](https://nextjs.org/docs/app/building-your-application/routing/internationalization)にある形で実装しましたがちょっと煩雑になっている感があったのですが、next-i18n-router にあやかりスッキリしました。
 
 Server Components での対応は NextRequest で i18n のインスタンス管理ができれば middleware で設定できそうな気もしますが、上手くできなかったので layout.tsx に記述してしまう形で落ち着きました。（いい方法あればぜひコメントください）
