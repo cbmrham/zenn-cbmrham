@@ -31,7 +31,7 @@ published: true
 - app 下のファイルをすべて`[locale]`下に移動する
 
   ```bash
-  	└── app
+    └── app
       └── [locale]
           ├── layout.js
           └── page.js
@@ -83,7 +83,7 @@ published: true
 
 となります。
 
-## i18next による Sserver Component の多言語対応
+## i18next による Server Component の多言語対応
 
 i18next を導入して SSG されるコンポーネントに対応します。
 
