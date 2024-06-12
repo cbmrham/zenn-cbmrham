@@ -86,7 +86,7 @@ npm install @cbmrham/recursive-diff
 
 @[codesandbox](https://codesandbox.io/embed/3lljlw?view=Editor+%2B+Preview&module=%2Fsrc%2FApp.tsx)
 
-リストに対しては差分が以下のようにでます（ i18n との組み合わせは工夫が必要なので改善の余地ありそう）。
+リストに対しては差分が以下のようにでます（ i18n との組み合わせは工夫が必要なので改善の余地ありそう）
 
 ```typescript
 const x: X = {
