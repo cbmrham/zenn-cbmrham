@@ -41,7 +41,7 @@ export const useWithLoading = <P extends unknown[], R>(
 
 ## 利用方法 example
 
-@[codesandbox](https://codesandbox.io/embed/yms7k2?view=editor+%2B+preview&module=%2Fsrc%2FApp.tsx)
+@[codesandbox](https://codesandbox.io/embed/dcz3m9?view=editor+%2B+preview&module=%2Fsrc%2FuseWithLoading.ts)
 
 こんな感じで、state.data によって型安全にアクセス可能で、call を使用することで初期ローディングやその後の再 fetch にも簡単に対応できます。
 
